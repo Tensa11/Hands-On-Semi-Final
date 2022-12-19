@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hands On Semi Final'),
+        title: const Text('To-do'),
       ),
       body: ListView.builder(
         itemCount: list.length,

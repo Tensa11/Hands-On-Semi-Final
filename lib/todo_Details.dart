@@ -30,6 +30,52 @@ class _TodoDetailsState extends State<TodoDetails> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("To-do Details"),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(20),
+        children: [
+          ListTile(
+            textColor: Colors.black,
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:  [
+                const Expanded(
+                  flex: 4,
+                  child: Text('Title:'),
+                ),
+                Expanded(
+                  flex: 9,
+                  child: Text(widget.todo['title'] as String),
+                )
+              ],
+            )
+          ),
+          const SizedBox(
+            height: 6,
+          ),
+          ListTile(
+              textColor: Colors.black,
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:  [
+                  const Expanded(
+                    flex: 4,
+                    child: Text('Description:'),
+                  ),
+                  Expanded(
+                    flex: 9,
+                    child: Text(widget.todo['body'] as String),
+                  )
+                ],
+              )
+          ),
+        ]
+      ),
+    );
   }
 }
