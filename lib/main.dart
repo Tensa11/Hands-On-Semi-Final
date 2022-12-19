@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:todo_list/todo_List.dart';
+import 'package:salas_hands_on_semi_finals/todo_List.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -8,7 +8,7 @@ void main() {
     theme: ThemeData(
       primarySwatch: Colors.red,
     ),
-    //home: const HomePage(),
+    home: const HomePage(),
     )
   );
 }
